@@ -5,7 +5,7 @@ Playing with React, Firebase and friends.
 ## 👾🤖🚀 Clone, install... GO 🚀🤖👾
 
 ```
-❯ git clone git@github.com:davidgchaves/template.git oferta-del-dia
+❯ git clone git@github.com:iagocrespo/oferta-del-dia.git
 ❯ cd oferta-del-dia
 ❯ npm install
 ```
@@ -40,7 +40,7 @@ v8.12.0
 ### How can I sync the project with a remote GitHub repository
 
 ```
-❯ git remote add origin git@github.com:davidgchaves/oferta-del-dia.git
+❯ git remote add git@github.com:iagocrespo/oferta-del-dia.git
 ❯ git push -u origin master
 ```
 
