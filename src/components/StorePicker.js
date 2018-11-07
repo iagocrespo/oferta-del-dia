@@ -11,7 +11,6 @@ class StorePicker extends React.Component {
           <span role="img" aria-labelledby="Avocado">
             🥑
           </span>
-          ;
         </button>
       </form>
     );
