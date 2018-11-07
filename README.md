@@ -74,3 +74,72 @@ const Dave = () => {
   return <p>"What do you think you are doing, Dave?"</p>;
 };
 ```
+
+### Component structure
+
+```jsx
+// IMPORTS
+import React from "react";
+
+// COMPONENT
+class Dave extends React.Component {
+  render() {
+    return <p>What do you think you are doing, Dave?</p>;
+  }
+}
+
+// EXPORT
+export default Dave;
+```
+
+### To JSX or to not JSX...
+
+#### With only one tag
+
+Both are equivalent
+
+```jsx
+<p>What do you think you are doing, Dave?</p>
+```
+
+```js
+React.createElement("p", {}, "What do you think you are doing, Dave?");
+```
+
+#### With nested tags
+
+Both are equivalent
+
+```jsx
+<div>
+  <p>What do you think you are doing, Dave?</p>
+</div>
+```
+
+```js
+React.createElement(
+  "div",
+  {},
+  React.createElement("p", {}, "What do you think you are doing, Dave?")
+);
+```
+
+### JSX Gotchas!
+
+#### Use `className` instead of `class`
+
+```jsx
+return <p className="my-class">What do you think you are doing, Dave?</p>;
+```
+
+#### Beware ASI (Automatic Semicolon Insertion)
+
+If you leave `return` alone in one line a semicolon is automatically inserted! Use `return ( .... )`.
+
+```jsx
+return (
+  <div>
+    <p className="my-class">What do you think you are doing, Dave?</p>
+  </div>
+);
+```
