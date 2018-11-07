@@ -49,3 +49,28 @@ v8.12.0
 - [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) extension for Firefox.
 - [CMDer](http://cmder.net/): Command Line Emulator for Windows.
 - [Create React App 2](https://github.com/facebook/create-react-app)
+
+### Info de React
+
+- Todo en React es un componente.
+- Un componente es una pieza reusable de tu pagina web.
+- WebPack es un agrupador.
+- Hot Reloading: es lo que hace que el navegador se vaya actualizando en tiempo real.
+
+### How to declare a component
+
+Both are equivalent
+
+```jsx
+class Dave extends React.Component {
+  render() {
+    return <p>"What do you think you are doing, Dave?"</p>;
+  }
+}
+```
+
+```jsx
+const Dave = () => {
+  return <p>"What do you think you are doing, Dave?"</p>;
+};
+```
