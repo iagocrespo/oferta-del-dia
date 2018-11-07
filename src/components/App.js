@@ -1,16 +1,9 @@
 import React from "react";
-
-import Dave from "./Dave";
-import Yo from "./Yo";
+import StorePicker from "./StorePicker";
 
 class App extends React.Component {
   render() {
-    return (
-      <>
-        <Dave />
-        <Yo />
-      </>
-    );
+    return <StorePicker />;
   }
 }
 
