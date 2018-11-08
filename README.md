@@ -148,3 +148,27 @@ return (
 
 - `state`: where the data lives.
 - `props`: a way to get data (`state`) into a component.
+
+## 3. Stateless Functional Function
+
+Both are equivalent
+
+```jsx
+class Header extends React.component {
+  render() {
+    return (
+      <h3 className="tagline">
+        <span>{this.props.tagline}</span>
+      </h3>
+    );
+  }
+}
+```
+
+```js
+React.createElement(
+  "div",
+  {},
+  React.createElement("p", {}, "What do you think you are doing, Dave?")
+);
+```
