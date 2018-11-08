@@ -144,6 +144,7 @@ return (
 );
 ```
 
-##
+## 2. `props` and `state`
 
-hgfds
+- `state`: where the data lives.
+- `props`: a way to get data (`state`) into a component.
