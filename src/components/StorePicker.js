@@ -4,12 +4,12 @@ class StorePicker extends React.Component {
   render() {
     return (
       <form className="store-selector">
-        <h2>Please enter a Store</h2>
+        <h2>Please Enter a Store</h2>
         <input type="text" required placeholder="Store Name" />
         <button type="submit">
           Visit Store{" "}
-          <span role="img" aria-labelledby="Avocado">
-            🥑
+          <span role="img" aria-labelledby="sushi-box">
+            🍱
           </span>
         </button>
       </form>

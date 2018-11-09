@@ -200,5 +200,3 @@ const Header = ({ tagline }) => (
   </h3>
 );
 ```
-
-## 4.
