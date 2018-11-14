@@ -211,11 +211,11 @@ There's at least 3 great options for routing in React:
 
 We are going to use `@reach/router` but there's a branch with `react/router` too [here](https://github.com/davidgchaves/oferta-del-dia/tree/react-router)
 
-##6. `this`
+## 6. Binding `this` inside a Component
 
 Binding our own methods/functions inside a `component`
 
-### Inside a `constructor`
+### Method 1: Inside a `constructor`
 
 ```jsx
 class StorePicker extends React.Component {
@@ -229,7 +229,7 @@ constructor (props) {
 goToStore(event) {}
 ```
 
-###Declare a `property` instead of `method`/`function` inside the component
+### Method 2: Declare a `property` instead of `method`/`function` inside the component
 
 ```jsx
 class StorePicker extends React.Component {
@@ -237,4 +237,4 @@ class StorePicker extends React.Component {
 }
 ```
 
-If you must accsess `this` inside a custom method/function in a component, you need to blind `this`
+**Remember**: if you must accsess `this` inside a custom method/function in a component, you need to blind `this` with method 1 or even better using Method 2
