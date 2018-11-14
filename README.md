@@ -248,3 +248,11 @@ class StorePicker extends React.Component {
 ```
 
 **Remember**: if you must accsess `this` inside a custom method/function in a component, you need to blind `this` with method 1 or even better using Method 2
+
+## 7. State in React
+
+- **State** is a JavaScript Object that lives inside a component and contains all the data components and probably its cgildren need.
+
+- **State** is just an JavaScript Object that holds data.
+
+React philosophy: Update the data (state) and let it React take it and update components for us
