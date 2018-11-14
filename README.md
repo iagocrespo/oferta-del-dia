@@ -200,3 +200,41 @@ const Header = ({ tagline }) => (
   </h3>
 );
 ```
+
+## 4. Routing and Routers
+
+There's at least 3 great options for routing in React:
+
+- [`react-router`](https://reacttraining.com/react-router/web/guides/quick-start)
+- [`next.js`](https://github.com/zeit/next.js/#routing)
+- [`@reach/router`](https://reach.tech/router)
+
+We are going to use `@reach/router` but there's a branch with `react/router` too [here](https://github.com/davidgchaves/oferta-del-dia/tree/react-router)
+
+##6. `this`
+
+Binding our own methods/functions inside a `component`
+
+### Inside a `constructor`
+
+```jsx
+class StorePicker extends React.Component {
+constructor (props) {
+  super(props)
+
+  this.goToStore =this.goToStore.bind(this)
+}
+
+
+goToStore(event) {}
+```
+
+###Declare a `property` instead of `method`/`function` inside the component
+
+```jsx
+class StorePicker extends React.Component {
+  goToStore = event => {};
+}
+```
+
+If you must accsess `this` inside a custom method/function in a component, you need to blind `this`
