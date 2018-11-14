@@ -211,6 +211,16 @@ There's at least 3 great options for routing in React:
 
 We are going to use `@reach/router` but there's a branch with `react/router` too [here](https://github.com/davidgchaves/oferta-del-dia/tree/react-router)
 
+## 5. Events in React
+
+[Synthetic Events in React](https://reactjs.org/docs/events.html)
+
+Hey React! When somebody clicks the button, execute this (`handleClick`) 👇 function, please:
+
+```jsx
+<button onClick={this.handleClick}>
+```
+
 ## 6. Binding `this` inside a Component
 
 Binding our own methods/functions inside a `component`
