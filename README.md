@@ -256,3 +256,7 @@ class StorePicker extends React.Component {
 - **State** is just an JavaScript Object that holds data.
 
 React philosophy: Update the data (state) and let it React take it and update components for us
+
+You can never pass data up, you can only pass data down.
+
+Functions that update state and the state itself nood to be in the same component.
