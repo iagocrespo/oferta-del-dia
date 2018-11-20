@@ -299,4 +299,6 @@ Create a custom alias
 
 ❯now alias https://oferta-del-dia-2s72oqmaq.now.sh obradoiroteoKLK
 
+You can enter to obradoiroteoKLK.now.sh
+
 ```
