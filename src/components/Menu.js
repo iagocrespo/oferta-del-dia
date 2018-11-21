@@ -9,7 +9,12 @@ class Menu extends React.Component {
         <Header tagline="Fresh Seafood Market" />
         <ul className="fishes">
           {Object.keys(this.props.pescados).map(pescado => (
-            <Fish key={pescado} fishDetails={this.props.pescados[pescado]} />
+            <Fish
+              key={pescado}
+              index={pescado}
+              fishDetails={this.props.pescados[pescado]}
+              addToOrder={this.props.addToOrder}
+            />
           ))}
         </ul>
       </div>
