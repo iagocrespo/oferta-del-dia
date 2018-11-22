@@ -41,7 +41,7 @@ class App extends React.Component {
     return (
       <div className="catch-of-the-day">
         <Menu pescados={this.state.fishes} addToOrder={this.addToOrder} />
-        <Order />
+        <Order pescados={this.state.fishes} pedido={this.state.order} />
         <Inventory
           addFish={this.addFish}
           loadSampleFishes={this.loadSampleFishes}
