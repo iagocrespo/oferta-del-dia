@@ -338,3 +338,9 @@ Create a `_redirects` file 👇
 ❯ cp _redirects build/
 ❯ netlify deploy
 ```
+
+## Ternary Operator
+
+```
+fish ? fish.name : "product"
+```
