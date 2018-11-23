@@ -3,13 +3,13 @@ import { formatPrice } from "../helpers";
 
 class Order extends React.Component {
   totalReducer = (subTotal, value) => {
-    const unitPrice = this.props.pescados[value].price;
-    const quantity = this.props.pedido[value];
+    const unitPrice = this.props.fishes[value].price;
+    const quantity = this.props.order[value];
     return quantity * unitPrice + subTotal;
   };
   render() {
-    const pedidoIds = Object.keys(this.props.pedido);
-    const total = pedidoIds.reduce(this.suma, 0);
+    const orderIds = Object.keys(this.props.order);
+    const total = orderIds.reduce(this.totalReducer, 0);
 
     return (
       <div className="order-wrap">

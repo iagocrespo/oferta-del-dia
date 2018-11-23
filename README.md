@@ -40,7 +40,7 @@ v8.12.0
 ### How can I sync the project with a remote GitHub repository
 
 ```
-❯ git remote add git@github.com:iagocrespo/oferta-del-dia.git
+❯ git remote add origin git@github.com:iagocrespo/oferta-del-dia.git
 ❯ git push -u origin master
 ```
 
@@ -50,12 +50,22 @@ v8.12.0
 - [CMDer](http://cmder.net/): Command Line Emulator for Windows.
 - [Create React App 2](https://github.com/facebook/create-react-app)
 
-### Info de React
+### Troubleshooting
 
-- Todo en React es un componente.
-- Un componente es una pieza reusable de tu pagina web.
-- WebPack es un agrupador.
-- Hot Reloading: es lo que hace que el navegador se vaya actualizando en tiempo real.
+Try
+
+```
+❯ rm -rf node_modules/
+❯ rm -rf package-lock.json
+❯ npm install
+❯ npm start
+```
+
+## 1. Intro to React
+
+- Everything in react is a component!
+- A component is a reusable piece of code.
+- Webpack is a bundler.
 
 ### How to declare a component
 
@@ -64,14 +74,14 @@ Both are equivalent
 ```jsx
 class Dave extends React.Component {
   render() {
-    return <p>"What do you think you are doing, Dave?"</p>;
+    return <p>What do you think you are doing, Dave?</p>;
   }
 }
 ```
 
 ```jsx
 const Dave = () => {
-  return <p>"What do you think you are doing, Dave?"</p>;
+  return <p>What do you think you are doing, Dave?</p>;
 };
 ```
 
@@ -223,20 +233,20 @@ Hey React! When somebody clicks the button, execute this (`handleClick`) 👇 fu
 
 ## 6. Binding `this` inside a Component
 
-Binding our own methods/functions inside a `component`
+Binding our own methods/functions inside a `component`.
 
-### Method 1: Inside a `constructor`
+### Method 1: Inside the `constructor`
 
 ```jsx
 class StorePicker extends React.Component {
-constructor (props) {
-  super(props)
+  constructor(props) {
+    super(props);
 
-  this.goToStore =this.goToStore.bind(this)
+    this.goToStore = this.goToStore.bind(this);
+  }
+
+  goToStore(event) {}
 }
-
-
-goToStore(event) {}
 ```
 
 ### Method 2: Declare a `property` instead of `method`/`function` inside the component
@@ -247,36 +257,43 @@ class StorePicker extends React.Component {
 }
 ```
 
-**Remember**: if you must accsess `this` inside a custom method/function in a component, you need to blind `this` with method 1 or even better using Method 2
+**Remember**: if you must access `this` inside a custom method/function in a component, you need to bind `this` with Method 1 or even better using Method 2.
 
 ## 7. State in React
 
-- **State** is a JavaScript Object that lives inside a component and contains all the data components and probably its cgildren need.
+- **State** is a JavaScript Object that lives inside a component and stores all the data that the component and probably its children need.
+- **State** is just a JavaScript Object that holds data.
 
-- **State** is just an JavaScript Object that holds data.
-
-React philosophy: Update the data (state) and let it React take it and update components for us
+React philosophy: Update the data (state) and let it React take it and update components for us.
 
 You can never pass data up, you can only pass data down.
 
-Functions that update state and the state itself nood to be in the same component.
+Functions that update state and the state itself need to be in the same component.
 
-### Deploying To Now
+## X. Production build
 
-[Now — Global Serverless Deployments](https://zeit.co/now)
+Just run 👇
+
+```sh
+❯ npm run build
+```
+
+### Deploying to `now`
+
+- [Now — Global Serverless Deployments](https://zeit.co/now)
+- [Create React App Example](https://github.com/zeit/now-examples/tree/master/create-react-app)
 
 ```
-❯npm install -g now
-❯now -v
+❯ npm install -g now
+❯ now -v
 12.1.3
 ```
 
-Change `start` scripts to `dev` scripts and make a new `start` script that runs the production build
+Change `start` script to `dev` script.
 
 ```json
-
 "scripts": {
-    "dev": "react-scripts start",
+  "dev": "react-scripts start"
 }
 ```
 
@@ -293,7 +310,7 @@ Create a `now.json` file at the root of your project
 }
 ```
 
-Create a custom alias
+Create a custom alias 👇
 
 ```
 
@@ -301,4 +318,23 @@ Create a custom alias
 
 You can enter to obradoiroteoKLK.now.sh
 
+```
+
+### Deploy to Netlify
+
+```
+❯ npm install -g netlify-cli
+❯ netlify --version
+netlify-cli/2.2.1 darwin-x64 node-v8.12.0
+```
+
+Create a `_redirects` file 👇
+
+```
+/*    /index.html   200
+```
+
+```
+❯ cp _redirects build/
+❯ netlify deploy
 ```

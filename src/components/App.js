@@ -24,14 +24,14 @@ class App extends React.Component {
     this.setState({ fishes: sampleFishes });
   };
 
-  addToOrder = key => {
+  addToOrder = orderKey => {
     //1. Take a copy of the existing state
     const newOrder = { ...this.state.order };
     //2. Either add our order iten to newOrder or update the quantity
-    if (newOrder[key]) {
-      newOrder[key] = newOrder[key] + 1;
+    if (newOrder[orderKey]) {
+      newOrder[orderKey] = newOrder[orderKey] + 1;
     } else {
-      newOrder[key] = 1;
+      newOrder[orderKey] = 1;
     }
     // 3. Set nweOrder as the new `state`
     this.setState({ order: newOrder });
@@ -40,8 +40,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="catch-of-the-day">
-        <Menu pescados={this.state.fishes} addToOrder={this.addToOrder} />
-        <Order pescados={this.state.fishes} pedido={this.state.order} />
+        <Menu fishes={this.state.fishes} addToOrder={this.addToOrder} />
+        <Order fishes={this.state.fishes} order={this.state.order} />
         <Inventory
           addFish={this.addFish}
           loadSampleFishes={this.loadSampleFishes}
