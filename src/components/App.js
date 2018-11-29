@@ -56,7 +56,7 @@ class App extends React.Component {
   deleteFish = fishKey => {
     //1. Take a copy of the existing state
     const deletedFishes = { ...this.state.fishes };
-    //2. Add our updatedFish to updatedFishes
+    //2. Add our deletedFish to deletedFishes
     deletedFishes[fishKey] = null;
     // 3. Set updatedFishes as the new state
     this.setState({ fishes: deletedFishes });
