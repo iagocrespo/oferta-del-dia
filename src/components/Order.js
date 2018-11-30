@@ -44,7 +44,7 @@ class Order extends React.Component {
     if (isAvailable) {
       return (
         <CSSTransition {...orderTransitionOptions}>
-          <li key={orderKey} orderKey={orderKey}>
+          <li key={orderKey}>
             <span>
               <TransitionGroup component="span" className="count">
                 <CSSTransition {...countTransitionOptions}>
