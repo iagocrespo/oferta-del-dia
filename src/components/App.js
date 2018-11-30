@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Inventory from "./Inventory";
 import Order from "./Order";
@@ -7,6 +8,10 @@ import Menu from "./Menu";
 import base from "../base";
 
 class App extends React.Component {
+  static propTypes = {
+    storeId: PropTypes.string
+  };
+
   state = {
     fishes: {},
     order: {}
